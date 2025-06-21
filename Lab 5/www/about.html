@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне | Валенко Дмитрий</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #4fc3f7;
+            --dark: #0a1128;
+            --light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+            header::after {
+                content: '';
+                position: absolute;
+                bottom: -50px;
+                left: 0;
+                right: 0;
+                height: 50px;
+                background: linear-gradient(to bottom right, transparent 49%, white 50%);
+            }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 3rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+            margin: 2rem 0;
+        }
+
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: 15px;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: var(--accent);
+            }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+        }
+
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -50px;
+                top: 5px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: var(--primary);
+                border: 3px solid var(--accent);
+            }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--secondary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 2rem;
+        }
+
+        .skill {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+            .skill:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--light);
+            margin-top: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+            .social-links a {
+                color: var(--dark);
+                font-size: 1.5rem;
+                transition: color 0.3s;
+            }
+
+                .social-links a:hover {
+                    color: var(--primary);
+                }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Валенко Дмитрий</h1>
+            <p class="subtitle">К сожалению Fullstack разработчик</p>
+        </header>
+
+        <div class="content">
+            <h2>Обо мне</h2>
+            <p>Разработчик этой страницы и многих других интересных проектов. Люблю создавать удобные и красивые решения для сложных задач.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">давно</span>
+                    <h3>Разработчик WPF приложений</h3>
+                    <p>Создавал десктопные приложения для Windows с использованием WPF, XAML и C#. Работал над системами учета и бизнес-аналитики.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">не так давно</span>
+                    <h3>Разработчик микросервисов</h3>
+                    <p>Переключился на backend-разработку с ASP.NET Core. Создавал масштабируемые микросервисные архитектуры для АСКУЭ.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">последние пару лет</span>
+                    <h3>Фронтенд-разработчик</h3>
+                    <p>Решил стать счастливым и полностью погрузился в мир фронтенда.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Сейчас</span>
+                    <h3>Fullstack разработчик</h3>
+                    <p>Сейчас разрабатываю клиент-серверные приложения для лабораторных работ во время отпуска.</p>
+                </div>
+            </div>
+
+            <h3>Мои навыки</h3>
+            <div class="skills">
+                <span class="skill">C#</span>
+                <span class="skill">ASP.NET Core</span>
+                <span class="skill">WPF</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">TypeScript</span>
+                <span class="skill">React</span>
+                <span class="skill">Vue</span>
+                <span class="skill">HTML/CSS</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Терпение...</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Валенко Дмитрий. Все нервы защищены.</p>
+        </footer>
+    </div>
+</body>
+</html>
